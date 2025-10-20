@@ -16,4 +16,25 @@ def add_student(name, year_of_birth, address):
     student_list.append(student)
     print(f"Da them sinh vien {name} thanh cong.")
 
+student_list = [
+    {"name": "Nguyen Van An", "year_of_birth": 2003, "address": "Da Nang"},
+    {"name": "Tran Thi Binh", "year_of_birth": 2002, "address": "Quang Nam"},
+    {"name": "Le Van Hung", "year_of_birth": 2003, "address": "Hue"}
+]
+
+def print_student_list():
+    """
+    YÊU CẦU 2: HOÀN THIỆN HÀM NÀY
+    - In ra tiêu đề "--- DANH SACH SINH VIEN ---".
+    - Nếu danh sách trống, in ra "Danh sach trong.".
+    - Nếu không, duyệt qua `student_list` và in từng sinh viên theo định dạng:
+      " - Ten: [Họ tên], Nam sinh: [Năm sinh], Dia chi: [Địa chỉ]"
+    """
+    print("--- DANH SACH SINH VIEN ---")
+    if not student_list:
+        print("Danh sach trong.")
+    else:
+        for s in student_list:
+            print(f" - Ten: {s['name']}, Nam sinh: {s['year_of_birth']}, Dia chi: {s['address']}")
+
 
